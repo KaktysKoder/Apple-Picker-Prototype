@@ -308,10 +308,20 @@ PrefabInstance:
       propertyPath: chanceToChangeDirections
       value: 0.002
       objectReference: {fileID: 0}
+    - target: {fileID: 7944723575304424414, guid: c4199423aedcdf84f8baa80fc690ff93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7944723575426218761, guid: c4199423aedcdf84f8baa80fc690ff93,
         type: 3}
       propertyPath: m_Name
       value: AppleTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944723575426218761, guid: c4199423aedcdf84f8baa80fc690ff93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7944723575426218763, guid: c4199423aedcdf84f8baa80fc690ff93,
         type: 3}
@@ -367,6 +377,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944723576299807473, guid: c4199423aedcdf84f8baa80fc690ff93,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4199423aedcdf84f8baa80fc690ff93, type: 3}
