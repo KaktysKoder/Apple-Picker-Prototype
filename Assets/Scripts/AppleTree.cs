@@ -17,6 +17,22 @@ public class AppleTree : MonoBehaviour
 
     private void Update()
     {
-        // TODO: Простое перемещение и изменение направления.
+        // Простое перемещение.
+        Vector3 tempPositionTree = transform.position;
+
+        tempPositionTree.x += appleTreeSpeed * Time.deltaTime;
+
+        transform.position = tempPositionTree;
+
+
+        // Изменение направления
+        if (tempPositionTree.x < -leftAndRightEdge)
+        {
+            appleTreeSpeed = Mathf.Abs(appleTreeSpeed);
+        }
+        else if (tempPositionTree.x > leftAndRightEdge)
+        {
+            appleTreeSpeed = -Mathf.Abs(appleTreeSpeed);
+        }
     }
 }
