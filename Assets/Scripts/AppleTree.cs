@@ -15,6 +15,15 @@ public class AppleTree : MonoBehaviour
         // TODO: Сбрасывать яблоки раз в секунду.
     }
 
+    private void FixedUpdate()
+    {
+        // Случайное направление движения яблони.
+        if (Random.value < chanceToChangeDirections)
+        {
+            appleTreeSpeed *= -1; // Change direction.
+        }
+    }
+
     private void Update()
     {
         // Простое перемещение.
@@ -25,7 +34,7 @@ public class AppleTree : MonoBehaviour
         transform.position = tempPositionTree;
 
 
-        // Изменение направления
+        // Изменение направления.
         if (tempPositionTree.x < -leftAndRightEdge)
         {
             appleTreeSpeed = Mathf.Abs(appleTreeSpeed);
