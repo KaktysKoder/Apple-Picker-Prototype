@@ -10,10 +10,7 @@ public class AppleTree : MonoBehaviour
     [SerializeField] private float chanceToChangeDirections = 0.1f;
     [SerializeField] private float secondBetweenAppleDrops = 1.0f;
 
-    private void Start()
-    {
-        // TODO: Сбрасывать яблоки раз в секунду.
-    }
+    private void Start() => Invoke("DropApple", 2.0f);
 
     private void FixedUpdate()
     {
@@ -43,5 +40,17 @@ public class AppleTree : MonoBehaviour
         {
             appleTreeSpeed = -Mathf.Abs(appleTreeSpeed);
         }
+    }
+
+    /// <summary>
+    /// Метод спавна яблок на позиции яблони каждые secondBetweenAppleDrops секунд.
+    /// </summary>
+    private void DropApple()
+    {
+        GameObject apple = Instantiate(applePrefab);
+
+        apple.transform.position = transform.position;
+
+        Invoke("DropApple", secondBetweenAppleDrops);
     }
 }
