@@ -10,8 +10,11 @@ public class AppleTree : MonoBehaviour
     [SerializeField] private float chanceToChangeDirections = 0.1f;
     [SerializeField] private float secondBetweenAppleDrops = 1.0f;
 
-    private void Start() => Invoke("DropApple", 2.0f);
-
+    private void Start()
+    {
+        Invoke("DropApple", 2.0f);
+    }
+    
     private void FixedUpdate()
     {
         // Случайное направление движения яблони.
@@ -31,7 +34,7 @@ public class AppleTree : MonoBehaviour
         transform.position = tempPositionTree;
 
 
-        // Изменение направления.
+        // Изменение направления яблони.
         if (tempPositionTree.x < -leftAndRightEdge)
         {
             appleTreeSpeed = Mathf.Abs(appleTreeSpeed);
